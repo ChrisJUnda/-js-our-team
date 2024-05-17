@@ -45,13 +45,44 @@ console.log(team);
 //Milestone 1
 
 for(let i = 0; i < team.length; i++){
-
     const person = team[i]
-    console.log(person)
-
     for(let key in person){
-        console.log(key)
-        console.log(person[key])
+        console.log(`${key}: ${person[key]}`);
+
+
+        console.log('---');
     }
 
 }
+
+//Milestone 2
+
+const listaGruppo = document.getElementById('lista')
+
+console.log(listaGruppo)
+/*
+<li>
+            <h3>Nome Persona</h3>
+            <h5>Ruolo Persona</h5>
+            <p>Immagine persona</p>
+        </li>
+*/
+let liElement = '' ;
+
+for (let i = 0; i < team.length; i++) {
+    const person = team[i];
+
+    liElement += `
+    <li>
+        <h3>${person.nome}</h3>
+        <h5>${person.ruolo}</h5>
+        <p>${person.foto}</p>
+    </li>`
+
+
+
+}
+
+listaGruppo.innerHTML = liElement
+
+
