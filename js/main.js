@@ -41,3 +41,17 @@ const team = [
 
 console.log(team);
 
+
+//Milestone 1
+
+for(let i = 0; i < team.length; i++){
+
+    const person = team[i]
+    console.log(person)
+
+    for(let key in person){
+        console.log(key)
+        console.log(person[key])
+    }
+
+}
